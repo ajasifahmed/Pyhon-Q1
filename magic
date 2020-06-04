@@ -1,0 +1,14 @@
+import csv
+with open('record.csv','w+',newline='') as f:
+    write=csv.writer(f,delimiter='|')
+    write.writerow(['S.No','Name','Subject'])
+    write.writerow(['1','Ali','Sut'])
+    write.writerow(['2','Nam','Subect'])
+    write.writerow(['3','Nme','Subjet'])
+    write.writerow(['4','Ne','Suct'])
+    write.writerow(['5','Nae','Sub'])
+    f.seek(0)
+    
+    contents=csv.reader(f)
+    for c in contents:
+        print(c)
